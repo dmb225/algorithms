@@ -1,4 +1,5 @@
 import pytest
+from unittest.mock import sentinel
 
 
 def clear_duplicates(lst: list) -> list:
@@ -12,3 +13,8 @@ def clear_duplicates(lst: list) -> list:
 ])
 def test_clear_duplicates_removes_duplicate_elements(lst, res):
     assert clear_duplicates(lst) == res
+
+
+def test_clear_duplicates_does_not_affect_lists_without_duplicates():
+    lst = [sentinel.el1, sentinel.el2, sentinel.el3]
+    assert clear_duplicates(lst) == lst
