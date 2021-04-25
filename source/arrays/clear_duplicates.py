@@ -4,12 +4,8 @@ from unittest.mock import sentinel
 
 def clear_duplicates(lst: list) -> list:
     """
-        Remove duplicate items in a given list
-        @input: a list
-        @output: a list with unique word
-        Ex:
-            - clear_duplicates([1, 1, 1]) = [1]
-            - clear_duplicates([1, 2, 1]) = [1, 2]
+    :param lst: a list
+    :return: a list with unique word
     """
     return list(dict.fromkeys(lst))
 
