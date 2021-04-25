@@ -1,7 +1,8 @@
 import pytest
+from typing import List
 
 
-def merge_sorted_inplace(nums1: list, m: int, nums2: list, n: int) -> None:
+def merge_sorted_inplace(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
     """
     :param nums1: list of size m + n with ending with n * [0]
     :param nums2: list of size n
