@@ -28,3 +28,9 @@ def merge_sorted_inplace(nums1: List[int], m: int, nums2: List[int], n: int) -> 
 def test_merge_sorted(nums1, m, nums2, n, res):
     merge_sorted_inplace(nums1, m, nums2, n)
     assert nums1 == res
+
+
+if __name__ == "__main__":
+    nums = [1, 2, 3, 0, 0, 0]
+    merge_sorted_inplace(nums, 3, [2, 5, 6], 3)
+    assert nums == [1, 2, 2, 3, 5, 6]
