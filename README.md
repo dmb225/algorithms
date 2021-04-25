@@ -1,6 +1,6 @@
 ## Description
 
-Coding test snippets
+Coding exercises with their unit tests
 
 ## Getting Started
 
