@@ -1,10 +1,9 @@
 import pytest
 
 
-def reverse_inplace(lst: list):
+def reverse_inplace(lst: list) -> None:
     """
     :param lst: a list of characters
-    :return: lst in reversed order
     """
     i = 0
     k = len(lst) - 1
