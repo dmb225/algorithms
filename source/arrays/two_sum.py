@@ -20,7 +20,7 @@ def two_sum(nums: Tuple[int], target: int) -> Tuple[int]:
         if (target - nums[i]) in d:
             return d[target - nums[i]], i
         d[nums[i]] = i
-    return 0, 1
+    return -1, -1
 
 
 @pytest.mark.parametrize('nums, target, res', [
