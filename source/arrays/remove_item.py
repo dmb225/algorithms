@@ -6,7 +6,12 @@ class EmptyListError(Exception):
     pass
 
 
-def remove_item(nums: List[int], val: int) -> int:
+def remove_item_inplace(nums: List[int], val: int) -> int:
+    """
+    :param nums: a list of integer
+    :param val: the value we want to remove from the list
+    :return: the length of the list after remove all val occurrences
+    """
     if val not in nums:
         return len(nums)
     n = 0
@@ -23,6 +28,6 @@ def remove_item(nums: List[int], val: int) -> int:
     ([3, 2, 2, 3], 1, 4),
     ([], 1, 0),
 ])
-def test_remove_item(nums, val, res):
-    assert remove_item(nums, val) == res
+def remove_item_inplace(nums, val, res):
+    assert remove_item_inplace(nums, val) == res
     assert nums[:res] == [nums[i] for i in range(res) if nums[i] != val]
