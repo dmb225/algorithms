@@ -3,6 +3,11 @@ from typing import List
 
 
 def common_prefix(s1: str, s2: str) -> str:
+    """
+    :param s1: a string
+    :param s2: a string
+    :return: the common prefix of s1 and s2
+    """
     cp = ''
     for c1, c2 in zip(s1, s2):
         if c1 != c2:

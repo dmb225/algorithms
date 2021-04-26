@@ -3,6 +3,10 @@ import re
 
 
 def atoi(s: str) -> int:
+    """
+    :param s: a string containing an integer
+    :return: the integer inside the string
+    """
     if not len(s):
         return 0
     s = re.findall("(^[\+\-0]*\d+)\D*", s.strip())
