@@ -3,6 +3,10 @@ import re
 
 
 def reverse_words(s: str) -> str:
+    """
+    :param s: a string of separated words
+    :return: a string with the same words in reversed order
+    """
     lst = re.findall('[a-z0-9]+', s, flags=re.IGNORECASE)
     return ' '.join(lst[::-1])
 

@@ -5,7 +5,7 @@ class InvalidSubStrSizeError(Exception):
     pass
 
 
-def find_sub_str(s: str, sub: str) -> int:
+def find_substring(s: str, sub: str) -> int:
     """
     :param s: a string
     :param sub: the potential sub str
@@ -32,7 +32,7 @@ def find_sub_str(s: str, sub: str) -> int:
     ('abc', 'c', 2),
 ])
 def test_find_sub_str(s, sub, res):
-    assert find_sub_str(s, sub) == res
+    assert find_substring(s, sub) == res
 
 
 @pytest.mark.parametrize('s, sub, res', [
@@ -41,4 +41,4 @@ def test_find_sub_str(s, sub, res):
 ])
 def test_two_sum_not_enough_items(s, sub, res):
     with pytest.raises(InvalidSubStrSizeError):
-        assert find_sub_str(s, sub) == res
+        assert find_substring(s, sub) == res
