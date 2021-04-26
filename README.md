@@ -11,8 +11,8 @@ Coding exercises with their unit tests
 
 ### Installing
 
-* git clone git@github.com:dmb225/test.git
-* cd test
+* git clone git@github.com:dmb225/algorithms.git
+* cd algorithms
 * virtualenv --python=python3.8 venv --no-site-packages
 * source venv /bin/activate
 * pip install -r requirements.txt

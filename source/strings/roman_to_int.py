@@ -1,7 +1,7 @@
 import pytest
 
 
-class NotEnoughItemsError(Exception):
+class EmptyListError(Exception):
     pass
 
 
@@ -11,7 +11,7 @@ def roman_to_int(s: str) -> int:
     :return: The corresponding integer
     """
     if len(s) < 1:
-        raise NotEnoughItemsError('The roman number should have at least 1 letter')
+        raise EmptyListError('The roman number should have at least 1 letter')
         return -1
     d = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     i, res = 0, 0
@@ -38,5 +38,5 @@ def test_roman_to_int(roman, res):
     ('', -1),
 ])
 def test_two_sum_not_enough_items(roman, res):
-    with pytest.raises(NotEnoughItemsError):
+    with pytest.raises(EmptyListError):
         assert roman_to_int(roman) == res
