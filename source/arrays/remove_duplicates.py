@@ -11,7 +11,7 @@ def remove_duplicates(lst: list) -> list:
     return list(dict.fromkeys(lst))
 
 
-def remove_duplicates_in_sorted_inplace(nums: List[int]) -> int:
+def remove_duplicates_from_sorted_inplace(nums: List[int]) -> int:
     """
     :param nums: a list of integers
     :return: the list without duplicated items
@@ -46,6 +46,6 @@ def test_clear_duplicates_does_not_affect_lists_without_duplicates():
     ([1], 1),
     ([], 0),
 ])
-def test_remove_duplicates_in_sorted_inplace(nums, res):
-    assert remove_duplicates_in_sorted_inplace(nums) == res
+def test_remove_duplicates_from_sorted_inplace(nums, res):
+    assert remove_duplicates_from_sorted_inplace(nums) == res
     assert nums[:res] == remove_duplicates(nums)
