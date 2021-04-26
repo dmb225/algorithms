@@ -28,6 +28,6 @@ def remove_item_inplace(nums: List[int], val: int) -> int:
     ([3, 2, 2, 3], 1, 4),
     ([], 1, 0),
 ])
-def remove_item_inplace(nums, val, res):
+def test_remove_item_inplace(nums, val, res):
     assert remove_item_inplace(nums, val) == res
     assert nums[:res] == [nums[i] for i in range(res) if nums[i] != val]

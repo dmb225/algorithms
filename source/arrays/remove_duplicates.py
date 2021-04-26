@@ -20,7 +20,7 @@ def remove_duplicates_in_sorted_inplace(nums: List[int]) -> int:
         return 0
     n = 1
     for i in range(1, len(nums)):
-        if nums[i] != nums[i-1]:
+        if nums[i] != nums[i - 1]:
             nums[n] = nums[i]
             n += 1
     return n
