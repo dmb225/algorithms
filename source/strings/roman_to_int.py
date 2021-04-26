@@ -32,3 +32,11 @@ def roman_to_int(s: str) -> int:
 ])
 def test_roman_to_int(roman, res):
     assert roman_to_int(roman) == res
+
+
+@pytest.mark.parametrize('roman, res', [
+    ('', -1),
+])
+def test_two_sum_not_enough_items(roman, res):
+    with pytest.raises(NotEnoughItemsError):
+        assert roman_to_int(roman) == res
