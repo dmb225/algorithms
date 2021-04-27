@@ -24,4 +24,3 @@ def longest_substring_length(s: str) -> int:
 ])
 def test_longest_substring_length(s, res):
     assert longest_substring_length(s) == res
-
